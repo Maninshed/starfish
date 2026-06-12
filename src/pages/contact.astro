@@ -1,0 +1,184 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Contact - ${SITE_TITLE}`} description="Get in touch with Starfish Covers & Canvas for a free discussion and quotation on your bespoke cover or canopy project." />
+	</head>
+	<body class="bg-background text-text">
+		<Header />
+		<main>
+			<!-- Page Header -->
+			<section class="bg-gradient-to-br from-deep-purple via-primary to-electric-blue text-white py-20 relative overflow-hidden">
+				<!-- Floating decorative shapes -->
+				<div class="absolute top-10 left-20 w-32 h-32 bg-copper/20 rounded-full animate-blob blur-xl"></div>
+				<div class="absolute bottom-10 right-20 w-40 h-40 bg-white/10 rounded-full animate-blob blur-xl" style="animation-delay: 2s;"></div>
+				
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<h1 class="text-4xl lg:text-5xl font-bold mb-4">Contact Us</h1>
+					<p class="text-xl text-white/90 max-w-3xl">Got a weird cover problem? We'll have a look.</p>
+				</div>
+			</section>
+
+			<!-- Contact Information -->
+			<section class="py-20 bg-white">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="grid md:grid-cols-3 gap-8 mb-16">
+						<div class="text-center">
+							<div class="bg-gradient-to-br from-primary to-electric-blue w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-deep-purple mb-2">Phone</h3>
+							<p class="text-text/70">01234 567890</p>
+							<p class="text-text/50 text-sm">Mon-Fri 9am-5pm</p>
+						</div>
+						<div class="text-center">
+							<div class="bg-gradient-to-br from-electric-blue to-deep-purple w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-electric-blue/30">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-deep-purple mb-2">Email</h3>
+							<p class="text-text/70">info@starfishcovers.co.uk</p>
+							<p class="text-text/50 text-sm">We'll respond within 24 hours</p>
+						</div>
+						<div class="text-center">
+							<div class="bg-gradient-to-br from-deep-purple to-copper w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-deep-purple/30">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-deep-purple mb-2">Location</h3>
+							<p class="text-text/70">United Kingdom</p>
+							<p class="text-text/50 text-sm">Workshop visits by appointment</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Request a Quote Form -->
+			<section class="py-20 bg-background">
+				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl lg:text-4xl font-bold text-deep-purple mb-4">Request a Quote</h2>
+						<p class="text-lg text-text/70 max-w-2xl mx-auto">Tell us about your project and we'll get back to you with a free quotation</p>
+					</div>
+					<form class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+						<div class="grid md:grid-cols-2 gap-6 mb-6">
+							<div>
+								<label for="name" class="block text-sm font-medium text-text mb-2">Name *</label>
+								<input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Your name">
+							</div>
+							<div>
+								<label for="email" class="block text-sm font-medium text-text mb-2">Email *</label>
+								<input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="your@email.com">
+							</div>
+						</div>
+						<div class="grid md:grid-cols-2 gap-6 mb-6">
+							<div>
+								<label for="phone" class="block text-sm font-medium text-text mb-2">Phone</label>
+								<input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Your phone number">
+							</div>
+							<div>
+								<label for="project-type" class="block text-sm font-medium text-text mb-2">Project Type *</label>
+								<select id="project-type" name="project-type" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white">
+									<option value="">Select a project type</option>
+									<option value="marine">Marine Cover/Canopy</option>
+									<option value="commercial">Commercial/Industrial Cover</option>
+									<option value="gazebo">Gazebo Panels</option>
+									<option value="pvc">PVC Fabrication</option>
+									<option value="repair">Repair/Refurbishment</option>
+									<option value="custom">Custom/Bespoke Project</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="mb-6">
+							<label for="description" class="block text-sm font-medium text-text mb-2">Project Description *</label>
+							<textarea id="description" name="description" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none" placeholder="Please describe your project, including dimensions, materials, and any specific requirements..."></textarea>
+						</div>
+						<div class="mb-6">
+							<label for="photos" class="block text-sm font-medium text-text mb-2">Photos (Optional)</label>
+							<div class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-primary transition-colors cursor-pointer">
+								<svg class="w-12 h-12 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+								</svg>
+								<p class="text-text/70 mb-2">Click to upload or drag and drop</p>
+								<p class="text-text/50 text-sm">PNG, JPG up to 10MB each</p>
+								<input type="file" id="photos" name="photos" multiple accept="image/png,image/jpeg" class="hidden">
+							</div>
+						</div>
+						<button type="submit" class="w-full bg-gradient-to-r from-primary to-electric-blue text-white px-8 py-4 rounded-full font-semibold hover:from-copper hover:to-copper transition-all transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30">
+							Send Enquiry
+						</button>
+					</form>
+				</div>
+			</section>
+
+			<!-- General Contact Form -->
+			<section class="py-20 bg-white">
+				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl lg:text-4xl font-bold text-deep-purple mb-4">General Enquiry</h2>
+						<p class="text-lg text-text/70 max-w-2xl mx-auto">Have a question or just want to get in touch?</p>
+					</div>
+					<form class="bg-background rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+						<div class="grid md:grid-cols-2 gap-6 mb-6">
+							<div>
+								<label for="general-name" class="block text-sm font-medium text-text mb-2">Name *</label>
+								<input type="text" id="general-name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white" placeholder="Your name">
+							</div>
+							<div>
+								<label for="general-email" class="block text-sm font-medium text-text mb-2">Email *</label>
+								<input type="email" id="general-email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white" placeholder="your@email.com">
+							</div>
+						</div>
+						<div class="mb-6">
+							<label for="subject" class="block text-sm font-medium text-text mb-2">Subject *</label>
+							<input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white" placeholder="How can we help?">
+						</div>
+						<div class="mb-6">
+							<label for="message" class="block text-sm font-medium text-text mb-2">Message *</label>
+							<textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none bg-white" placeholder="Your message..."></textarea>
+						</div>
+						<button type="submit" class="w-full bg-gradient-to-r from-electric-blue to-deep-purple text-white px-8 py-4 rounded-full font-semibold hover:from-copper hover:to-copper transition-all transform hover:-translate-y-1 hover:shadow-lg hover:shadow-electric-blue/30">
+							Send Message
+						</button>
+					</form>
+				</div>
+			</section>
+
+			<!-- Map/Location Section -->
+			<section class="py-20 bg-background">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl lg:text-4xl font-bold text-deep-purple mb-4">Visit Our Workshop</h2>
+						<p class="text-lg text-text/70 max-w-2xl mx-auto">By appointment only – please contact us to arrange a visit</p>
+					</div>
+					<div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+						<div class="aspect-video bg-gradient-to-br from-primary/10 to-electric-blue/10 rounded-xl flex items-center justify-center relative overflow-hidden">
+							<svg class="w-24 h-24 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+							</svg>
+						</div>
+						<div class="mt-6 text-center">
+							<p class="text-text/70">Starfish Covers & Canvas Workshop</p>
+							<p class="text-text/70">United Kingdom</p>
+							<p class="text-text/50 text-sm mt-2">Please call or email to arrange an appointment</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

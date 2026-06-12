@@ -1,62 +1,189 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description="Learn about Starfish Covers & Canvas - specialist manufacturers of bespoke covers and canvas products with a focus on quality craftsmanship." />
+	</head>
+	<body class="bg-background text-text">
+		<Header />
+		<main>
+			<!-- Page Header -->
+			<section class="bg-gradient-to-br from-deep-purple via-primary to-electric-blue text-white py-20 relative overflow-hidden">
+				<!-- Floating decorative shapes -->
+				<div class="absolute top-10 left-20 w-32 h-32 bg-copper/20 rounded-full animate-blob blur-xl"></div>
+				<div class="absolute bottom-10 right-20 w-40 h-40 bg-white/10 rounded-full animate-blob blur-xl" style="animation-delay: 2s;"></div>
+				
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<h1 class="text-4xl lg:text-5xl font-bold mb-4">About Starfish</h1>
+					<p class="text-xl text-white/90 max-w-3xl">Canvas, PVC, covers, panels and practical fabric wizardry</p>
+				</div>
+			</section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<!-- Our Story -->
+			<section class="py-20 bg-white">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="grid lg:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 class="text-3xl font-bold text-deep-purple mb-6">Our Story</h2>
+							<p class="text-lg text-text/70 mb-6">Starfish Covers & Canvas was founded with a simple mission: to provide high-quality, bespoke covers and canvas solutions that stand the test of time. We understand that every project is unique, and we take pride in our ability to deliver custom solutions tailored to our customers' specific needs.</p>
+							<p class="text-lg text-text/70 mb-6">Our workshop is equipped with the tools and expertise needed to handle projects of all sizes, from small repairs to large-scale fabrications. We work with a wide range of materials including canvas, PVC, and specialist fabrics, ensuring we can find the right solution for every application.</p>
+							<p class="text-lg text-text/70">Whether you're a boat owner needing a new cratch cover, a business requiring industrial equipment protection, or someone with a unique fabrication challenge, we're here to help.</p>
+						</div>
+						<div class="bg-background rounded-2xl p-8 aspect-square flex items-center justify-center relative overflow-hidden">
+							<svg viewBox="0 0 200 200" class="w-full h-full text-primary/40">
+								<rect x="40" y="40" width="120" height="120" fill="none" stroke="currentColor" stroke-width="2" rx="5"/>
+								<path d="M40 80 L160 80" stroke="currentColor" stroke-width="1" stroke-dasharray="5,5"/>
+								<path d="M40 120 L160 120" stroke="currentColor" stroke-width="1" stroke-dasharray="5,5"/>
+								<path d="M80 40 L80 160" stroke="currentColor" stroke-width="2"/>
+								<path d="M120 40 L120 160" stroke="currentColor" stroke-width="2"/>
+								<circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<!-- Craftsmanship -->
+			<section class="py-20 bg-background">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl lg:text-4xl font-bold text-deep-purple mb-4">Our Commitment to Craftsmanship</h2>
+						<p class="text-lg text-text/70 max-w-3xl mx-auto">Quality isn't just a buzzword for us – it's the foundation of everything we do</p>
+					</div>
+					<div class="grid md:grid-cols-3 gap-8">
+						<div class="bg-white rounded-2xl p-8 text-center transform hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20 transition-all">
+							<div class="bg-gradient-to-br from-primary to-electric-blue w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-deep-purple mb-3">Quality Materials</h3>
+							<p class="text-text/70">We source only the best materials for every project, ensuring durability and longevity in all our products.</p>
+						</div>
+						<div class="bg-white rounded-2xl p-8 text-center transform hover:-translate-y-2 hover:shadow-xl hover:shadow-electric-blue/20 transition-all">
+							<div class="bg-gradient-to-br from-electric-blue to-deep-purple w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-electric-blue/30">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-deep-purple mb-3">Expert Techniques</h3>
+							<p class="text-text/70">Our team combines traditional sewing skills with modern fabrication techniques for superior results.</p>
+						</div>
+						<div class="bg-white rounded-2xl p-8 text-center transform hover:-translate-y-2 hover:shadow-xl hover:shadow-copper/20 transition-all">
+							<div class="bg-gradient-to-br from-copper to-primary w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-copper/30">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-deep-purple mb-3">Built to Last</h3>
+							<p class="text-text/70">We design and manufacture products that are built to withstand the elements and daily use.</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<!-- Our Values -->
+			<section class="py-20 bg-white">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl lg:text-4xl font-bold text-deep-purple mb-4">Our Values</h2>
+						<p class="text-lg text-text/70 max-w-3xl mx-auto">The principles that guide everything we do</p>
+					</div>
+					<div class="grid md:grid-cols-2 gap-8">
+						<div class="flex gap-4">
+							<div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-deep-purple mb-2">Personal Service</h3>
+								<p class="text-text/70">We believe in building relationships with our customers. From the initial consultation through to final delivery, you'll deal with real people who care about your project.</p>
+							</div>
+						</div>
+						<div class="flex gap-4">
+							<div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-deep-purple mb-2">Efficiency</h3>
+								<p class="text-text/70">We respect your time and work efficiently to deliver projects on schedule without compromising on quality. Clear communication throughout ensures no surprises.</p>
+							</div>
+						</div>
+						<div class="flex gap-4">
+							<div class="bg-electric-blue/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-deep-purple mb-2">Fair Pricing</h3>
+								<p class="text-text/70">We offer competitive, transparent pricing with no hidden costs. We'll provide clear quotations upfront so you know exactly what to expect.</p>
+							</div>
+						</div>
+						<div class="flex gap-4">
+							<div class="bg-copper/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-deep-purple mb-2">Sustainability</h3>
+								<p class="text-text/70">Where possible, we repair and refurbish existing covers rather than replacing them, helping to reduce waste and extend the life of quality products.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<!-- Why Choose Us -->
+			<section class="py-20 bg-background">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="grid lg:grid-cols-2 gap-12 items-center">
+						<div class="order-2 lg:order-1 bg-white rounded-2xl p-8 aspect-square flex items-center justify-center relative overflow-hidden">
+							<svg viewBox="0 0 200 200" class="w-full h-full text-primary/40">
+								<circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="2"/>
+								<circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="2"/>
+								<circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="2"/>
+								<path d="M100 30 L100 10" stroke="currentColor" stroke-width="2"/>
+								<path d="M100 170 L100 190" stroke="currentColor" stroke-width="2"/>
+								<path d="M30 100 L10 100" stroke="currentColor" stroke-width="2"/>
+								<path d="M170 100 L190 100" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</div>
+						<div class="order-1 lg:order-2">
+							<h2 class="text-3xl font-bold text-deep-purple mb-6">Why Choose Starfish?</h2>
+							<p class="text-lg text-text/70 mb-6">When you choose Starfish Covers & Canvas, you're choosing a team that takes genuine pride in their work. We're not just manufacturers – we're craftspeople who care about every stitch, every seam, and every customer.</p>
+							<p class="text-lg text-text/70 mb-6">Our experience spans marine, commercial, and industrial applications, giving us the knowledge and versatility to tackle projects of all types. We've built our reputation on quality workmanship and reliable service, and we're committed to maintaining those standards with every project we undertake.</p>
+							<p class="text-lg text-text/70">Get in touch today to discuss your project and discover the Starfish difference for yourself.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<section class="py-20 bg-gradient-to-br from-deep-purple via-primary to-electric-blue text-white relative overflow-hidden">
+				<!-- Floating decorative shapes -->
+				<div class="absolute top-10 left-20 w-32 h-32 bg-copper/20 rounded-full animate-blob blur-xl"></div>
+				<div class="absolute bottom-10 right-20 w-40 h-40 bg-white/10 rounded-full animate-blob blur-xl" style="animation-delay: 2s;"></div>
+				
+				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+					<h2 class="text-3xl lg:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
+					<p class="text-xl text-white/90 mb-8">We'd love to hear about your project and discuss how we can help.</p>
+					<a href="/contact" class="inline-block bg-copper text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-deep-purple transition-all transform hover:-translate-y-1 hover:shadow-lg hover:shadow-copper/30">
+						Get in Touch
+					</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,26 @@
+---
+const { size = "text-2xl" } = Astro.props;
+---
+
+<a href="/" class="flex items-center gap-3 group">
+  <svg 
+    viewBox="0 0 100 100" 
+    class="w-12 h-12 text-primary group-hover:animate-wiggle transition-colors duration-300"
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <!-- Hand-drawn style starfish with slight irregularities -->
+    <path d="M50 8 C52 15, 58 18, 62 25 C68 24, 75 22, 80 28 C78 35, 75 40, 72 48 C78 52, 85 55, 88 62 C82 68, 78 72, 72 78 C75 85, 72 92, 68 95 C62 92, 58 88, 52 86 C48 92, 45 95, 40 96 C38 90, 36 85, 32 80 C25 84, 18 82, 14 76 C18 70, 22 65, 26 58 C20 54, 14 50, 12 44 C18 40, 24 38, 30 34 C28 28, 30 20, 34 16 C40 18, 44 22, 48 26 C48 18, 49 12, 50 8" />
+    <!-- Imperfect center -->
+    <ellipse cx="50" cy="52" rx="9" ry="8" transform="rotate(5 50 52)" />
+    <!-- Little decorative dots -->
+    <circle cx="50" cy="52" r="3" fill="currentColor" />
+  </svg>
+  <div class="flex flex-col">
+    <span class="font-bold text-primary ${size} leading-tight tracking-tight">Starfish</span>
+    <span class="text-sm text-text/70 font-medium tracking-wide">Covers & Canvas</span>
+  </div>
+</a>
